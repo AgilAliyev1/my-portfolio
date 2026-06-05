@@ -1,0 +1,25 @@
+{
+  "homepage": "https://AgilAliyev1.github.io/my-portfolio",
+  "name": "my-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "react": "^18.x.x",
+    "react-dom": "^18.x.x",
+    "react-router-dom": "^6.x.x"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.x.x",
+    "vite": "^5.x.x",
+    "@vitejs/plugin-react": "^4.x.x"
+  }
+}
