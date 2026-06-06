@@ -5,7 +5,7 @@ export const certificates = [
     issuer: 'Forage',
     date: '2025',
     category: 'Cybersecurity',
-    url: '/certificates/forage-cybersecurity.pdf',
+    url: `${import.meta.env.BASE_URL}certificates/forage-cybersecurity.pdf`,
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const certificates = [
     issuer: 'Zero to Mastery',
     date: '2025',
     category: 'Cybersecurity',
-    url: '/certificates/ethical-hacking.pdf',
+    url: `${import.meta.env.BASE_URL}certificates/ethical-hacking.pdf`,
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const certificates = [
     issuer: 'AKS English Camp',
     date: '2025',
     category: 'Leadership',
-    url: '/certificates/aks-camp.pdf',
+    url: `${import.meta.env.BASE_URL}certificates/aks-camp.pdf`,
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const certificates = [
     issuer: 'European Youth Parliament Azerbaijan',
     date: '2025',
     category: 'Leadership',
-    url: '/certificates/eyp-organizer-outreach.pdf',
+    url: `${import.meta.env.BASE_URL}certificates/eyp-organizer-outreach.pdf`,
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const certificates = [
     issuer: 'European Youth Parliament Azerbaijan',
     date: '2025',
     category: 'Leadership',
-    url: '/certificates/eyp-financial-summit.pdf',
+    url: `${import.meta.env.BASE_URL}certificates/eyp-financial-summit.pdf`,
   },
   {
     id: 6,
@@ -45,6 +45,6 @@ export const certificates = [
     issuer: 'COP29 Azerbaijan',
     date: '2024',
     category: 'Volunteer',
-    url: '/certificates/cop29-volunteer.png',
+    url: `${import.meta.env.BASE_URL}certificates/cop29-volunteer.png`,
   },
 ]
