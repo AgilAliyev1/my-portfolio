@@ -3,7 +3,7 @@ export const projects = [
       id: 1,
       title: 'Portfolio Website',
       description:
-        'Personal portfolio built with React and Vite. Dark theme, client-side routing, and responsive layout to showcase projects, skills, and resume.',
+        'Personal portfolio built with React and Vite. Clean layout, client-side routing, and responsive design to showcase projects, skills, and resume.',
       tags: ['React', 'Vite', 'CSS Modules'],
       link: 'https://github.com/AgilAliyev1',
       live: '',

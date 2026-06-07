@@ -1,12 +1,14 @@
 :root {
-  --color-bg: #0f1117;
-  --color-surface: #1a1d27;
-  --color-surface-hover: #222633;
-  --color-border: #2a2f3f;
-  --color-text: #e8eaed;
-  --color-text-muted: #8b92a5;
-  --color-accent: #6c63ff;
-  --color-accent-hover: #5a52e0;
+  --color-bg: #ffffff;
+  --color-surface: #fafafa;
+  --color-surface-hover: #f3f4f6;
+  --color-border: #e5e7eb;
+  --color-text: #111827;
+  --color-text-muted: #6b7280;
+  --color-accent: #111827;
+  --color-accent-hover: #374151;
+  --color-accent-soft: rgba(17, 24, 39, 0.06);
+  --color-on-accent: #ffffff;
   --sidebar-width: 240px;
   --navbar-height: 60px;
   --spacing-xs: 0.25rem;

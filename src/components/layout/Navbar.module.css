@@ -40,7 +40,7 @@
 
 .active {
   color: var(--color-accent);
-  background: rgba(108, 99, 255, 0.1);
+  background: var(--color-accent-soft);
 }
 
 @media (max-width: 768px) {

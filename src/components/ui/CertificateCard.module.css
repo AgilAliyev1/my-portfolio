@@ -13,8 +13,8 @@
 .category {
   display: inline-block;
   font-size: 0.75rem;
-  color: var(--color-accent);
-  background: rgba(108, 99, 255, 0.1);
+  color: var(--color-text-muted);
+  background: var(--color-accent-soft);
   padding: 0.2rem 0.6rem;
   border-radius: var(--radius-sm);
   margin-bottom: var(--spacing-sm);

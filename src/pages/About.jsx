@@ -1,9 +1,10 @@
 import Layout from '../components/layout/Layout'
 import { profile } from '../data/profile'
-import { skills } from '../data/skills'
+import { skillGroups } from '../data/skills'
 import { education } from '../data/education'
 import { experience } from '../data/experience'
 import { volunteer } from '../data/volunteer'
+import { certificates } from '../data/certificates'
 import styles from './About.module.css'
 
 function About() {
@@ -87,21 +88,28 @@ function About() {
         </section>
 
         <section className={styles.section}>
+          <h2 className={styles.subheading}>Certifications & Training</h2>
+          <ul className={styles.certList}>
+            {certificates.map(cert => (
+              <li key={cert.id} className={styles.certItem}>
+                <span className={styles.certTitle}>{cert.title}</span>
+                <span className={styles.certMeta}>{cert.issuer} · {cert.date}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className={styles.section}>
           <h2 className={styles.subheading}>Skills</h2>
           <div className={styles.skillsGrid}>
-            {skills.map(skill => (
-              <div key={skill.id} className={styles.skill}>
-                <div className={styles.skillHeader}>
-                  <span className={styles.skillName}>{skill.name}</span>
-                  <span className={styles.skillLevel}>{skill.level}%</span>
+            {skillGroups.map(group => (
+              <div key={group.id} className={styles.skillGroup}>
+                <h3 className={styles.skillCategory}>{group.category}</h3>
+                <div className={styles.skillTags}>
+                  {group.items.map(item => (
+                    <span key={item} className={styles.skillTag}>{item}</span>
+                  ))}
                 </div>
-                <div className={styles.bar}>
-                  <div
-                    className={styles.barFill}
-                    style={{ width: `${skill.level}%` }}
-                  />
-                </div>
-                <span className={styles.category}>{skill.category}</span>
               </div>
             ))}
           </div>

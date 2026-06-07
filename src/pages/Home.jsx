@@ -13,7 +13,6 @@ function Home() {
         <p className={styles.bio}>{profile.summary}</p>
         <div className={styles.cta}>
           <Button href="/projects">View Projects</Button>
-          <Button variant="outline" href="/resume">View Resume</Button>
           <Button variant="outline" href="/contact">Get in Touch</Button>
         </div>
       </section>

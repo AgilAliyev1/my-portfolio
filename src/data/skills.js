@@ -1,18 +1,33 @@
-export const skills = [
-  { id: 1, name: 'Python', level: 75, category: 'Programming' },
-  { id: 2, name: 'Java', level: 65, category: 'Programming' },
-  { id: 3, name: 'C++', level: 60, category: 'Programming' },
-  { id: 4, name: 'JavaScript', level: 70, category: 'Programming' },
-  { id: 5, name: 'Nmap', level: 70, category: 'Security' },
-  { id: 6, name: 'Nessus', level: 55, category: 'Security' },
-  { id: 7, name: 'Ethical Hacking', level: 65, category: 'Security' },
-  { id: 8, name: 'Wireshark', level: 60, category: 'Security' },
-  { id: 9, name: 'Phishing Simulation', level: 65, category: 'Security' },
-  { id: 10, name: 'Network Fundamentals', level: 70, category: 'Networking' },
-  { id: 11, name: 'Linux', level: 65, category: 'Systems' },
-  { id: 12, name: 'Git', level: 75, category: 'Tools' },
-  { id: 13, name: 'Cisco (Networking)', level: 60, category: 'Networking' },
-  { id: 14, name: 'English', level: 90, category: 'Language' },
-  { id: 15, name: 'Turkish', level: 95, category: 'Language' },
-  { id: 16, name: 'Azerbaijani', level: 100, category: 'Language' },
+export const skillGroups = [
+  {
+    id: 1,
+    category: 'Programming',
+    items: ['Python', 'Java', 'C++', 'JavaScript'],
+  },
+  {
+    id: 2,
+    category: 'Security',
+    items: [
+      'Ethical Hacking',
+      'Nmap',
+      'Nessus',
+      'Wireshark',
+      'Phishing Simulation',
+    ],
+  },
+  {
+    id: 3,
+    category: 'Networking & Systems',
+    items: ['Network Fundamentals', 'Cisco Networking', 'Linux'],
+  },
+  {
+    id: 4,
+    category: 'Tools',
+    items: ['Git'],
+  },
+  {
+    id: 5,
+    category: 'Languages',
+    items: ['Azerbaijani (Native)', 'Turkish (Fluent)', 'English (Professional)'],
+  },
 ]

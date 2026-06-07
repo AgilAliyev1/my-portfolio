@@ -6,7 +6,6 @@ import Projects     from './pages/Projects'
 import Certificates from './pages/Certificates'
 import Blog         from './pages/Blog'
 import Contact      from './pages/Contact'
-import Resume       from './pages/Resume'
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
         <Route path="/certificates" element={<Certificates />} />
         <Route path="/blog"         element={<Blog />}         />
         <Route path="/contact"      element={<Contact />}      />
-        <Route path="/resume"       element={<Resume />}       />
       </Routes>
     </BrowserRouter>
   )
