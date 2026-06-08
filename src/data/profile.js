@@ -21,5 +21,5 @@ export const profile = {
     { name: 'Eolymp', url: 'https://eolymp.com/az/users/AgilAliyev1', handle: 'AgilAliyev1' },
   ],
   summary:
-    'Information Technologies student at ADA University with focused training in ethical hacking and offensive security fundamentals. Hands-on experience with phishing simulations, network scanning (Nmap), and scripting in Python. Seeking an entry-level Red Team role to apply attacker-focused thinking in real-world security environments.',
+    'COP29 volunteer and IT student at ADA University building offensive security skills through CTF labs, Nmap recon, and Python automation. Hands-on with phishing analysis, web app testing, and network enumeration. Targeting an entry-level Red Team role where attacker mindset meets real-world discipline.',
 }

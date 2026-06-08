@@ -19,6 +19,7 @@ export const az = {
     view: 'Bax →',
     all: 'Hamısı',
     builtWith: 'React ilə hazırlanıb',
+    writeupSoon: 'Yazı tezliklə',
   },
   home: {
     greeting: 'Salam, mən',
@@ -78,7 +79,7 @@ export const az = {
     title: 'Kibertəhlükəsizlik Həvəskarı',
     location: 'Bakı, Azərbaycan',
     summary:
-      'ADA Universitetində İnformasiya Texnologiyaları tələbəsi, etik haking və hücum təhlükəsizliyi əsasları üzrə ixtisaslaşmış təhsil alıram. Fişinq simulyasiyaları, şəbəkə skanlaşdırması (Nmap) və Python skriptləşdirmə sahəsində praktiki təcrübəm var. Real dünya təhlükəsizlik mühitlərində hücumçu yanaşmasını tətbiq etmək üçün başlanğıc səviyyəli Red Team roluna can atıram.',
+      'COP29 könüllüsü və ADA Universitetində İT tələbəsi — CTF laboratoriyaları, Nmap kəşfiyyatı və Python avtomatlaşdırması ilə hücum təhlükəsizliyi bacarıqları qururam. Fişinq təhlili, veb tətbiq testi və şəbəkə enumerasiyasında praktiki təcrübəm var. Hücumçu düşüncə tərzini real dünya intizamı ilə birləşdirən başlanğıc Red Team roluna hazırlaşıram.',
     emailLabels: {
       Personal: 'Şəxsi',
       University: 'Universitet',
@@ -139,6 +140,7 @@ export const az = {
       category: 'Proqramlaşdırma',
       items: [
         'Python',
+        'Bash',
         'Java',
         'JavaScript',
         'C++',
@@ -147,50 +149,44 @@ export const az = {
         'CSS',
         'Obyekt Yönümlü Proqramlaşdırma',
         'Məlumat Strukturları və Alqoritmlər',
-        'Frontend İnkişafı',
         'REST API-lər',
-        'Git / Versiya Nəzarəti',
       ],
     },
     {
       category: 'Kibertəhlükəsizlik',
       items: [
-        'Zəiflik Qiymətləndirməsi',
-        'Kəşfiyyat / Enumerasiya',
-        'Veb Tətbiq Təhlükəsizliyi Əsasları',
-        'Əsas Penetrasiya Testi Anlayışları',
-        'Təhlükəsizlik Məlumatlılığı / Fişinq Təhlili',
-        'Nmap',
-        'Wireshark',
-        'Burp Suite',
-        'Nessus',
-        'Metasploit',
+        'Şəbəkə Kəşfiyyatı (Nmap)',
+        'Zəiflik Qiymətləndirməsi (Nessus)',
+        'Paket Təhlili (Wireshark)',
+        'Veb Tətbiq Testi (Burp Suite)',
+        'Ekspluatasiya Freymvorkları (Metasploit)',
+        'CTF və Laboratoriya Əsaslı Pentest',
+        'Veb Tətbiq Təhlükəsizliyi (OWASP Top 10)',
         'XSS',
-        'Fişinq Simulyasiyası',
+        'Fişinq Təhlili və Simulyasiya',
       ],
     },
     {
       category: 'Şəbəkəçilik',
       items: [
         'TCP/IP',
-        'Şəbəkə Problemlərinin Həlli',
         'OSI Modeli',
-        'Əsas Routing və Switching',
-        'Paket Təhlili',
-        'Şəbəkə Əsasları',
+        'Şəbəkə Problemlərinin Həlli',
+        'Routing və Switching',
       ],
     },
     {
       category: 'Sistemlər',
       items: [
+        'Linux',
+        'Bash / Shell Skriptləşdirmə',
         'Virtual Maşınlar',
-        'Komanda Sətri / Terminal İstifadəsi',
-        'Linux Əsasları',
+        'Komanda Sətri',
       ],
     },
     {
       category: 'Alətlər',
-      items: ['Git', 'Cisco Packet Tracer', 'Linux', 'Virtual Maşınlar'],
+      items: ['Git', 'Cisco Packet Tracer'],
     },
     {
       category: 'Yumşaq Bacarıqlar',
@@ -221,27 +217,42 @@ export const az = {
     {
       title: 'Portfolio Veb Saytı',
       description:
-        'React və Vite ilə qurulmuş şəxsi portfolio. Layihələri, bacarıqları və CV-ni nümayiş etdirmək üçün təmiz layout, client-side routing və responsiv dizayn.',
+        'React 19, Vite, CSS Modules, EN/AZ i18n, Formspree əlaqə forması və Framer Motion animasiyaları ilə tam şəxsi sayt. Vercel-də SPA routing və SEO meta teqləri ilə deploy edilib.',
     },
     {
-      title: 'Capture The Flag',
+      title: 'CyLab CTF Tapşırıq Seriyası',
       description:
-        'CyLab Academy tapşırıqları vasitəsilə veb ekspluatasiyası, binary ekspluatasiyası və kriptoqrafiyanı əhatə edən praktiki CTF məşqləri.',
+        'CyLab Academy-də 15+ tapşırıq: veb ekspluatasiyası, binary təhlil və kriptoqrafiya. Hər kateqoriya üçün ekspluat zənciri, flag çıxarma addımları və düzəliş qeydləri sənədləşdirilib.',
     },
     {
       title: 'Şəbəkə Kəşfiyyatı Laboratoriyası',
       description:
-        'ADA Universitetində kibertəhlükəsizlik kursu çərçivəsində Nmap skanlaşdırma axınları və şəbəkə xəritələşdirmə məşqlərini sənədləşdirdim.',
+        'ADA Universitetində /24 subnet xəritələşdirmə: host kəşfiyyatı, SYN port skanları, xidmət versiyalaşdırması və Wireshark paket tutmaları. Annotasiyalı Nmap çıxışı ilə təkrarlana bilən 5 mərhələli kəşfiyyat checklist-i.',
     },
     {
       title: 'Fişinq Məlumatlılığı Simulyasiyası',
       description:
-        'Sosial mühəndislik taktikalarını və idarə olunan mühitlərdə istifadəçi məlumatlılığını öyrənmək üçün fişinq simulyasiya ssenarilərini dizayn etdim və təhlil etdim.',
+        'Təciliyyət, credential-harvest və saxta göndərən taktikalarını modelləşdirən 3 idarə olunan fişinq ssenarisi. Klik nisbətləri ölçülüb, uğursuzluq nümunələri təhlil edilib və istifadəçi məlumatlılığı nəticələri hazırlanıb.',
     },
     {
-      title: 'Kibertəhlükəsizlik Öyrənmə',
+      title: 'TryHackMe Hücum Təhlükəsizliyi Yolu',
       description:
-        'Müxtəlif CTF tapşırıqları və nəzəri məzmun vasitəsilə kibertəhlükəsizlik öyrənmə.',
+        'Nmap, Burp Suite, Metasploit və Linux əsasları üzrə 20+ otağı əhatə edən aktiv TryHackMe profili. Otaq walkthrough-larını şəxsi metodologiya qeydlərinə çevirməyə fokus.',
+    },
+    {
+      title: 'Nmap Kəşfiyyat Avtomatlaşdırma CLI',
+      description:
+        'Mərhələli kəşfiyyat aparan Python CLI: ping sweep → SYN skan → xidmət aşkarlanması → vaxt damğalı hesabatlar. Əl ilə Nmap axınını 6 əmrdən tək skriptli pipeline-a endirir.',
+    },
+    {
+      title: 'Veb Təhlükəsizlik Yazıları',
+      description:
+        'TryHackMe veb otaqları və OWASP Juice Shop laboratoriyalarından XSS, SQLi və autentifikasiya bypass tapıntıları. Hər yazıda kəşfiyyat, ekspluatasiya, təsir sübutu və düzəliş.',
+    },
+    {
+      title: 'Fişinq E-poçt Analizatoru',
+      description:
+        'Şübhəli e-poçtları saxta başlıqlar, URL uyğunsuzluqları və açar söz qırmızı bayraqları üçün parse edən Python aləti. Fişinq məlumatlılığı məşqlərində əl ilə triyajı sürətləndirmək üçün qurulub.',
     },
   ],
   certificatesData: [

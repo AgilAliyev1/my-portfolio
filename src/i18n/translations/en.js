@@ -19,6 +19,7 @@ export const en = {
     view: 'View →',
     all: 'All',
     builtWith: 'Built with React',
+    writeupSoon: 'Writeup coming soon',
   },
   home: {
     greeting: "Hi there, I'm",
@@ -78,7 +79,7 @@ export const en = {
     title: 'Cybersecurity Enthusiast',
     location: 'Baku, Azerbaijan',
     summary:
-      'Information Technologies student at ADA University with focused training in ethical hacking and offensive security fundamentals. Hands-on experience with phishing simulations, network scanning (Nmap), and scripting in Python. Seeking an entry-level Red Team role to apply attacker-focused thinking in real-world security environments.',
+      'COP29 volunteer and IT student at ADA University building offensive security skills through CTF labs, Nmap recon, and Python automation. Hands-on with phishing analysis, web app testing, and network enumeration. Targeting an entry-level Red Team role where attacker mindset meets real-world discipline.',
     emailLabels: {
       Personal: 'Personal',
       University: 'University',
@@ -139,6 +140,7 @@ export const en = {
       category: 'Programming',
       items: [
         'Python',
+        'Bash',
         'Java',
         'JavaScript',
         'C++',
@@ -147,50 +149,44 @@ export const en = {
         'CSS',
         'Object-Oriented Programming',
         'Data Structures & Algorithms',
-        'Frontend Development',
         'REST APIs',
-        'Git / Version Control',
       ],
     },
     {
       category: 'Cybersecurity',
       items: [
-        'Vulnerability Assessment',
-        'Reconnaissance / Enumeration',
-        'Web Application Security Fundamentals',
-        'Basic Penetration Testing Concepts',
-        'Security Awareness / Phishing Analysis',
-        'Nmap',
-        'Wireshark',
-        'Burp Suite',
-        'Nessus',
-        'Metasploit',
+        'Network Reconnaissance (Nmap)',
+        'Vulnerability Assessment (Nessus)',
+        'Packet Analysis (Wireshark)',
+        'Web App Testing (Burp Suite)',
+        'Exploitation Frameworks (Metasploit)',
+        'CTF & Lab-Based Pentesting',
+        'Web App Security (OWASP Top 10)',
         'XSS',
-        'Phishing Simulation',
+        'Phishing Analysis & Simulation',
       ],
     },
     {
       category: 'Networking',
       items: [
         'TCP/IP',
-        'Network Troubleshooting',
         'OSI Model',
-        'Basic Routing & Switching',
-        'Packet Analysis',
-        'Network Fundamentals',
+        'Network Troubleshooting',
+        'Routing & Switching',
       ],
     },
     {
       category: 'Systems',
       items: [
+        'Linux',
+        'Bash / Shell Scripting',
         'Virtual Machines',
-        'Command Line / Terminal Usage',
-        'Linux Basics',
+        'Command Line',
       ],
     },
     {
       category: 'Tools',
-      items: ['Git', 'Cisco Packet Tracer', 'Linux', 'Virtual Machines'],
+      items: ['Git', 'Cisco Packet Tracer'],
     },
     {
       category: 'Soft Skills',
@@ -221,27 +217,42 @@ export const en = {
     {
       title: 'Portfolio Website',
       description:
-        'Personal portfolio built with React and Vite. Clean layout, client-side routing, and responsive design to showcase projects, skills, and resume.',
+        'Full-stack personal site with React 19, Vite, CSS Modules, EN/AZ i18n, Formspree contact form, and Framer Motion animations. Deployed on Vercel with SPA routing and SEO meta tags.',
     },
     {
-      title: 'Capture The Flag',
+      title: 'CyLab CTF Challenge Track',
       description:
-        'Hands-on CTF practice covering web exploitation, binary exploitation, and cryptography through CyLab Academy challenges.',
+        'Completed 15+ CyLab Academy challenges across web exploitation, binary analysis, and cryptography. Documented exploit chains, flag extraction steps, and remediation notes for each category.',
     },
     {
       title: 'Network Reconnaissance Lab',
       description:
-        'Documented Nmap scanning workflows and network mapping exercises as part of cybersecurity coursework at ADA University.',
+        'ADA University lab series mapping a /24 subnet: host discovery, SYN port scans, service versioning, and Wireshark packet captures. Produced a repeatable 5-stage recon checklist with annotated Nmap output.',
     },
     {
       title: 'Phishing Awareness Simulation',
       description:
-        'Designed and analyzed phishing simulation scenarios to study social engineering tactics and user awareness in controlled environments.',
+        'Designed 3 controlled phishing scenarios modeling urgency, credential-harvest, and spoofed-sender tactics. Measured click rates, analyzed failure patterns, and drafted user-facing awareness takeaways.',
     },
     {
-      title: 'Learning CyberSecurity',
+      title: 'TryHackMe Offensive Security Path',
       description:
-        'Learning CyberSecurity through different CTF tasks and theoretical content.',
+        'Active TryHackMe profile covering Nmap, Burp Suite, Metasploit, and Linux privilege basics across 20+ rooms. Focus on translating room walkthroughs into personal methodology notes.',
+    },
+    {
+      title: 'Nmap Recon Automation CLI',
+      description:
+        'Python CLI that runs staged recon: ping sweep → SYN scan → service detection → output to timestamped reports. Cuts manual Nmap workflow from 6 commands to a single scripted pipeline.',
+    },
+    {
+      title: 'Web Security Writeups',
+      description:
+        'Documented XSS, SQLi, and authentication-bypass findings from TryHackMe web rooms and OWASP Juice Shop labs. Each writeup covers recon, exploitation, proof-of-impact, and remediation.',
+    },
+    {
+      title: 'Phishing Email Analyzer',
+      description:
+        'Python toolkit that parses suspicious emails for spoofed headers, URL mismatches, and keyword red flags. Built to speed up manual triage during phishing awareness exercises.',
     },
   ],
   certificatesData: [
