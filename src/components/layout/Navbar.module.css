@@ -18,6 +18,12 @@
   font-size: 0.95rem;
 }
 
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
 .nav {
   display: flex;
   gap: var(--spacing-sm);

@@ -1,109 +1,122 @@
 import Layout from '../components/layout/Layout'
-import { profile } from '../data/profile'
-import { skillGroups } from '../data/skills'
 import { education } from '../data/education'
 import { experience } from '../data/experience'
 import { volunteer } from '../data/volunteer'
 import { certificates } from '../data/certificates'
+import { useLanguage } from '../i18n/LanguageContext'
 import styles from './About.module.css'
 
 function About() {
+  const { t } = useLanguage()
+
   return (
     <Layout>
       <div className={styles.page}>
-        <h1 className={styles.heading}>About Me</h1>
+        <h1 className={styles.heading}>{t.about.heading}</h1>
 
         <section className={styles.section}>
-          <p className={styles.bio}>{profile.summary}</p>
+          <p className={styles.bio}>{t.profile.summary}</p>
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.subheading}>Education</h2>
-          {education.map(item => (
-            <div key={item.id} className={styles.entry}>
-              <div className={styles.entryHeader}>
-                <div>
-                  <h3 className={styles.entryTitle}>{item.degree}</h3>
-                  <p className={styles.entryOrg}>{item.school} · {item.location}</p>
-                </div>
-                <span className={styles.period}>{item.period}</span>
-              </div>
-              <ul className={styles.list}>
-                {item.coursework.map(course => (
-                  <li key={course}>{course}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </section>
-
-        <section className={styles.section}>
-          <h2 className={styles.subheading}>Work Experience</h2>
-          <div className={styles.timeline}>
-            {experience.map(item => (
-              <div key={item.id} className={styles.timelineItem}>
-                <div className={styles.dot} />
-                <div className={styles.timelineContent}>
-                  <div className={styles.entryHeader}>
-                    <div>
-                      <h3 className={styles.entryTitle}>{item.role}</h3>
-                      <p className={styles.entryOrg}>{item.company}</p>
-                    </div>
-                    <span className={styles.period}>{item.period}</span>
+          <h2 className={styles.subheading}>{t.about.education}</h2>
+          {education.map((item, index) => {
+            const localized = t.education[index]
+            return (
+              <div key={item.id} className={styles.entry}>
+                <div className={styles.entryHeader}>
+                  <div>
+                    <h3 className={styles.entryTitle}>{localized.degree}</h3>
+                    <p className={styles.entryOrg}>{localized.school} · {localized.location}</p>
                   </div>
-                  <ul className={styles.list}>
-                    {item.points.map(point => (
-                      <li key={point}>{point}</li>
-                    ))}
-                  </ul>
+                  <span className={styles.period}>{localized.period}</span>
                 </div>
+                <ul className={styles.list}>
+                  {localized.coursework.map(course => (
+                    <li key={course}>{course}</li>
+                  ))}
+                </ul>
               </div>
-            ))}
+            )
+          })}
+        </section>
+
+        <section className={styles.section}>
+          <h2 className={styles.subheading}>{t.about.workExperience}</h2>
+          <div className={styles.timeline}>
+            {experience.map((item, index) => {
+              const localized = t.experience[index]
+              return (
+                <div key={item.id} className={styles.timelineItem}>
+                  <div className={styles.dot} />
+                  <div className={styles.timelineContent}>
+                    <div className={styles.entryHeader}>
+                      <div>
+                        <h3 className={styles.entryTitle}>{localized.role}</h3>
+                        <p className={styles.entryOrg}>{localized.company}</p>
+                      </div>
+                      <span className={styles.period}>{localized.period}</span>
+                    </div>
+                    <ul className={styles.list}>
+                      {localized.points.map(point => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.subheading}>Volunteer Work</h2>
+          <h2 className={styles.subheading}>{t.about.volunteerWork}</h2>
           <div className={styles.timeline}>
-            {volunteer.map(item => (
-              <div key={item.id} className={styles.timelineItem}>
-                <div className={styles.dot} />
-                <div className={styles.timelineContent}>
-                  <div className={styles.entryHeader}>
-                    <div>
-                      <h3 className={styles.entryTitle}>{item.role}</h3>
-                      <p className={styles.entryOrg}>{item.organization}</p>
+            {volunteer.map((item, index) => {
+              const localized = t.volunteer[index]
+              return (
+                <div key={item.id} className={styles.timelineItem}>
+                  <div className={styles.dot} />
+                  <div className={styles.timelineContent}>
+                    <div className={styles.entryHeader}>
+                      <div>
+                        <h3 className={styles.entryTitle}>{localized.role}</h3>
+                        <p className={styles.entryOrg}>{localized.organization}</p>
+                      </div>
+                      <span className={styles.period}>{localized.period}</span>
                     </div>
-                    <span className={styles.period}>{item.period}</span>
+                    <ul className={styles.list}>
+                      {localized.points.map(point => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
                   </div>
-                  <ul className={styles.list}>
-                    {item.points.map(point => (
-                      <li key={point}>{point}</li>
-                    ))}
-                  </ul>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.subheading}>Certifications & Training</h2>
+          <h2 className={styles.subheading}>{t.about.certifications}</h2>
           <ul className={styles.certList}>
-            {certificates.map(cert => (
-              <li key={cert.id} className={styles.certItem}>
-                <span className={styles.certTitle}>{cert.title}</span>
-                <span className={styles.certMeta}>{cert.issuer} · {cert.date}</span>
-              </li>
-            ))}
+            {certificates.map((cert, index) => {
+              const localized = t.certificatesData[index]
+              return (
+                <li key={cert.id} className={styles.certItem}>
+                  <span className={styles.certTitle}>{localized.title}</span>
+                  <span className={styles.certMeta}>{cert.issuer} · {cert.date}</span>
+                </li>
+              )
+            })}
           </ul>
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.subheading}>Skills</h2>
+          <h2 className={styles.subheading}>{t.about.skills}</h2>
           <div className={styles.skillsGrid}>
-            {skillGroups.map(group => (
-              <div key={group.id} className={styles.skillGroup}>
+            {t.skillGroups.map((group, index) => (
+              <div key={index} className={styles.skillGroup}>
                 <h3 className={styles.skillCategory}>{group.category}</h3>
                 <div className={styles.skillTags}>
                   {group.items.map(item => (
@@ -111,6 +124,16 @@ function About() {
                   ))}
                 </div>
               </div>
+            ))}
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <h2 className={styles.subheading}>{t.about.technologiesUsed}</h2>
+          <p className={styles.technologiesSub}>{t.about.technologiesSub}</p>
+          <div className={styles.technologies}>
+            {t.technologiesUsed.map(tech => (
+              <span key={tech} className={styles.techTag}>{tech}</span>
             ))}
           </div>
         </section>

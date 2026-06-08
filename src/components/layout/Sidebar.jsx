@@ -1,17 +1,21 @@
 import { NavLink } from 'react-router-dom'
 import { profile } from '../../data/profile'
+import { useLanguage } from '../../i18n/LanguageContext'
+import LanguageToggle from '../ui/LanguageToggle'
 import styles from './Sidebar.module.css'
 
-const navLinks = [
-  { path: '/',             label: 'Home',         icon: '⌂' },
-  { path: '/about',        label: 'About',        icon: '◎' },
-  { path: '/projects',     label: 'Projects',     icon: '⬡' },
-  { path: '/certificates', label: 'Certificates', icon: '✦' },
-  { path: '/blog',         label: 'Blog',         icon: '✐' },
-  { path: '/contact',      label: 'Contact',      icon: '✉' },
+const navPaths = [
+  { path: '/', key: 'home', icon: '⌂' },
+  { path: '/about', key: 'about', icon: '◎' },
+  { path: '/projects', key: 'projects', icon: '⬡' },
+  { path: '/certificates', key: 'certificates', icon: '✦' },
+  { path: '/blog', key: 'blog', icon: '✐' },
+  { path: '/contact', key: 'contact', icon: '✉' },
 ]
 
 function Sidebar() {
+  const { t } = useLanguage()
+
   return (
     <aside className={styles.sidebar}>
       <div className={styles.brand}>
@@ -20,7 +24,7 @@ function Sidebar() {
       </div>
 
       <nav className={styles.nav}>
-        {navLinks.map(link => (
+        {navPaths.map(link => (
           <NavLink
             key={link.path}
             to={link.path}
@@ -30,13 +34,14 @@ function Sidebar() {
             }
           >
             <span className={styles.icon}>{link.icon}</span>
-            <span>{link.label}</span>
+            <span>{t.nav[link.key]}</span>
           </NavLink>
         ))}
       </nav>
 
       <div className={styles.footer}>
-        <p className={styles.footerText}>Built with React</p>
+        <LanguageToggle />
+        <p className={styles.footerText}>{t.common.builtWith}</p>
       </div>
     </aside>
   )

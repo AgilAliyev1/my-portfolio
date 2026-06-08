@@ -67,6 +67,9 @@
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
   padding: var(--spacing-sm);
   border-top: 1px solid var(--color-border);
   margin-top: var(--spacing-md);
