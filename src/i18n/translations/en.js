@@ -48,6 +48,8 @@ export const en = {
   blog: {
     heading: 'Blog',
     sub: 'Thoughts, notes and updates',
+    back: '← Back to blog',
+    notFound: 'Post not found.',
   },
   contact: {
     heading: 'Contact',
@@ -62,6 +64,9 @@ export const en = {
     emailPlaceholder: 'your@email.com',
     messagePlaceholder: 'Your message...',
     send: 'Send Message',
+    sending: 'Sending...',
+    success: "Message sent! I'll get back to you soon.",
+    error: 'Something went wrong. Please try again or email me directly.',
     thanks: (name) => `Thanks ${name}! I'll get back to you soon.`,
   },
   categories: {
@@ -253,18 +258,33 @@ export const en = {
       excerpt:
         'Notes on host discovery, port scanning, and service enumeration for network reconnaissance.',
       readTime: '5 min',
+      content: [
+        'Nmap is one of the first tools I reach for when starting network reconnaissance. Before scanning ports, I usually begin with host discovery to see which systems are alive on a subnet.',
+        'For port scanning, I typically start with a SYN scan (-sS) to identify open services without completing the full TCP handshake. Once open ports are found, service enumeration (-sV) helps determine what software is running and which versions are in use.',
+        'Documenting each step matters — noting the scan type, timing, and results makes it easier to reproduce findings during labs or coursework. Combining Nmap output with Wireshark packet captures gives a much clearer picture of what is happening on the wire.',
+      ],
     },
     {
       title: 'Phishing Simulations: What I Learned',
       excerpt:
         'Reflections on running phishing awareness exercises and spotting common social engineering patterns.',
       readTime: '4 min',
+      content: [
+        'Running phishing simulations taught me that technical controls alone are not enough — people are often the first line of defense. The most convincing emails mimicked real internal communications: urgent deadlines, familiar sender names, and links that looked legitimate at a glance.',
+        'A few patterns stood out repeatedly: mismatched URLs on hover, generic greetings instead of names, and pressure to act immediately. Training users to pause and verify before clicking is more effective than any single filter.',
+        'The goal of a simulation is awareness, not punishment. Framing results as a learning opportunity helped participants understand what to watch for without creating fear around reporting suspicious messages.',
+      ],
     },
     {
       title: 'Building This Portfolio with React',
       excerpt:
         'How I structured routes, CSS modules, and components for a clean personal site with Vite.',
       readTime: '6 min',
+      content: [
+        'I chose React with Vite for fast development and a simple production build. React Router handles client-side navigation between pages like Projects, About, and Contact without full page reloads.',
+        'Each page and component has its own CSS Module, which keeps styles scoped and avoids class name collisions. Shared layout pieces — the sidebar and navbar — live in a Layout component that wraps every route.',
+        'Data for projects, certificates, and experience is separated into data files, while UI strings support English and Azerbaijani through a translation context. Deploying to Vercel was straightforward: a build command, a dist output folder, and a rewrite rule for SPA routing.',
+      ],
     },
   ],
 }

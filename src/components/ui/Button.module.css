@@ -29,3 +29,8 @@
   border-color: var(--color-accent);
   color: var(--color-accent);
 }
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -1,23 +1,26 @@
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../../i18n/LanguageContext'
 import styles from './BlogCard.module.css'
 
-function BlogCard({ title, excerpt, date, readTime, tags }) {
+function BlogCard({ id, title, excerpt, date, readTime, tags }) {
   const { t } = useLanguage()
 
   return (
-    <article className={styles.card}>
-      <div className={styles.meta}>
-        <span className={styles.date}>{date}</span>
-        <span className={styles.readTime}>{readTime} {t.common.read}</span>
-      </div>
-      <h3 className={styles.title}>{title}</h3>
-      <p className={styles.excerpt}>{excerpt}</p>
-      <div className={styles.tags}>
-        {tags.map(tag => (
-          <span key={tag} className={styles.tag}>{tag}</span>
-        ))}
-      </div>
-    </article>
+    <Link to={`/blog/${id}`} className={styles.cardLink}>
+      <article className={styles.card}>
+        <div className={styles.meta}>
+          <span className={styles.date}>{date}</span>
+          <span className={styles.readTime}>{readTime} {t.common.read}</span>
+        </div>
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.excerpt}>{excerpt}</p>
+        <div className={styles.tags}>
+          {tags.map(tag => (
+            <span key={tag} className={styles.tag}>{tag}</span>
+          ))}
+        </div>
+      </article>
+    </Link>
   )
 }
 

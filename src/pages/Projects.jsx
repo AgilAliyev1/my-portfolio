@@ -1,4 +1,5 @@
 import Layout from '../components/layout/Layout'
+import FadeIn from '../components/ui/FadeIn'
 import ProjectCard from '../components/ui/ProjectCard'
 import { projects } from '../data/projects'
 import { useLanguage } from '../i18n/LanguageContext'
@@ -15,11 +16,15 @@ function Projects() {
   return (
     <Layout>
       <div className={styles.page}>
-        <h1 className={styles.heading}>{t.projects.heading}</h1>
-        <p className={styles.sub}>{t.projects.sub}</p>
+        <FadeIn>
+          <h1 className={styles.heading}>{t.projects.heading}</h1>
+          <p className={styles.sub}>{t.projects.sub}</p>
+        </FadeIn>
         <div className={styles.grid}>
-          {localizedProjects.map(project => (
-            <ProjectCard key={project.id} {...project} />
+          {localizedProjects.map((project, index) => (
+            <FadeIn key={project.id} delay={0.1 + index * 0.08}>
+              <ProjectCard {...project} />
+            </FadeIn>
           ))}
         </div>
       </div>

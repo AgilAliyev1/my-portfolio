@@ -5,18 +5,39 @@ import { profile } from '../data/profile'
 import { useLanguage } from '../i18n/LanguageContext'
 import styles from './Contact.module.css'
 
+const FORMSPREE_URL = `https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_FORM_ID}`
+
 function Contact() {
   const { t } = useLanguage()
   const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [status, setStatus] = useState('idle')
 
   const handleChange = e => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
+    if (status !== 'idle') setStatus('idle')
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    alert(t.contact.thanks(form.name))
-    setForm({ name: '', email: '', message: '' })
+    setStatus('submitting')
+
+    try {
+      const response = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(form),
+      })
+
+      if (!response.ok) throw new Error('Submission failed')
+
+      setForm({ name: '', email: '', message: '' })
+      setStatus('success')
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -85,6 +106,7 @@ function Contact() {
               onChange={handleChange}
               placeholder={t.contact.namePlaceholder}
               required
+              disabled={status === 'submitting'}
             />
           </div>
 
@@ -98,6 +120,7 @@ function Contact() {
               onChange={handleChange}
               placeholder={t.contact.emailPlaceholder}
               required
+              disabled={status === 'submitting'}
             />
           </div>
 
@@ -111,10 +134,20 @@ function Contact() {
               placeholder={t.contact.messagePlaceholder}
               rows={6}
               required
+              disabled={status === 'submitting'}
             />
           </div>
 
-          <Button type="submit">{t.contact.send}</Button>
+          {status === 'success' && (
+            <p className={styles.success} role="status">{t.contact.success}</p>
+          )}
+          {status === 'error' && (
+            <p className={styles.error} role="alert">{t.contact.error}</p>
+          )}
+
+          <Button type="submit" disabled={status === 'submitting'}>
+            {status === 'submitting' ? t.contact.sending : t.contact.send}
+          </Button>
         </form>
       </div>
     </Layout>

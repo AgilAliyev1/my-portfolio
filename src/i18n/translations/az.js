@@ -48,6 +48,8 @@ export const az = {
   blog: {
     heading: 'Bloq',
     sub: 'Fikirlər, qeydlər və yeniliklər',
+    back: '← Bloqa qayıt',
+    notFound: 'Yazı tapılmadı.',
   },
   contact: {
     heading: 'Əlaqə',
@@ -62,6 +64,9 @@ export const az = {
     emailPlaceholder: 'sizin@email.com',
     messagePlaceholder: 'Mesajınız...',
     send: 'Mesaj göndər',
+    sending: 'Göndərilir...',
+    success: 'Mesaj göndərildi! Tezliklə sizə cavab verəcəyəm.',
+    error: 'Xəta baş verdi. Yenidən cəhd edin və ya birbaşa e-poçt göndərin.',
     thanks: (name) => `Təşəkkürlər, ${name}! Tezliklə sizə cavab verəcəyəm.`,
   },
   categories: {
@@ -253,18 +258,33 @@ export const az = {
       excerpt:
         'Şəbəkə kəşfiyyatı üçün host kəşfiyyatı, port skanlaşdırması və xidmət enumerasiyası haqqında qeydlər.',
       readTime: '5 dəq',
+      content: [
+        'Nmap şəbəkə kəşfiyyatına başlayanda istifadə etdiyim ilk alətlərdən biridir. Portları skan etməzdən əvvəl adətən host kəşfiyyatı ilə subnetdə hansı sistemlərin aktiv olduğunu müəyyən edirəm.',
+        'Port skanlaşdırması üçün adətən SYN skanı (-sS) ilə başlayıram ki, tam TCP handshake tamamlamadan açıq xidmətləri tapım. Açıq portlar tapıldıqdan sonra xidmət enumerasiyası (-sV) hansı proqram təminatının və versiyaların işlədiyini göstərir.',
+        'Hər addımı sənədləşdirmək vacibdir — skan növü, vaxtlaşdırma və nəticələri qeyd etmək laboratoriya və ya kurs işlərində tapıntıları təkrarlamağı asanlaşdırır. Nmap nəticələrini Wireshark paket tutmaları ilə birləşdirmək şəbəkədə nə baş verdiyini daha aydın göstərir.',
+      ],
     },
     {
       title: 'Fişinq Simulyasiyaları: Nə Öyrəndim',
       excerpt:
         'Fişinq məlumatlılığı məşqləri keçirmək və ümumi sosial mühəndislik nümunələrini müəyyən etmək haqqında düşüncələr.',
       readTime: '4 dəq',
+      content: [
+        'Fişinq simulyasiyaları keçirmək mənə göstərdi ki, yalnız texniki nəzarət kifayət etmir — insanlar tez-tez müdafiənin ilk xəttidir. Ən inandırıcı e-poçtlar real daxili yazışmaları təqlid edirdi: təcili son tarixlər, tanış göndərən adları və bir baxışda qanuni görünən keçidlər.',
+        'Bir neçə nümunə təkrarən seçildi: hover zamanı uyğun gəlməyən URL-lər, adlar əvəzinə ümumi salamlar və dərhal hərəkət etmək təzyiqi. İstifadəçiləri klikləməzdən əvvəl dayanıb yoxlamağa öyrətmək hər hansı tək filtrdən daha effektivdir.',
+        'Simulyasiyanın məqsədi cəzalandırmaq deyil, məlumatlılıqdır. Nəticələri öyrənmə fürsəti kimi təqdim etmək iştirakçılara şübhəli mesajları bildirməkdən qorxmadan nəyə diqqət yetirməyi öyrətdi.',
+      ],
     },
     {
       title: 'Bu Portfolio-nu React ilə Qurmaq',
       excerpt:
         'Vite ilə təmiz şəxsi sayt üçün marşrutları, CSS modullarını və komponentləri necə strukturlaşdırdım.',
       readTime: '6 dəq',
+      content: [
+        'Sürətli inkişaf və sadə production build üçün React və Vite seçdim. React Router Layihələr, Haqqımda və Əlaqə kimi səhifələr arasında tam səhifə yeniləməsi olmadan naviqasiyanı idarə edir.',
+        'Hər səhifə və komponentin öz CSS Modulu var, bu da stilləri izolyasiya edir və sinif adı toqquşmalarının qarşısını alır. Ümumi layout hissələri — sidebar və navbar — hər marşrutu əhatə edən Layout komponentində yerləşir.',
+        'Layihələr, sertifikatlar və təcrübə məlumatları ayrı data fayllarındadır, UI mətnləri isə tərcümə konteksti vasitəsilə ingilis və azərbaycan dillərini dəstəkləyir. Vercel-ə deploy sadə idi: build əmri, dist qovluğu və SPA routing üçün rewrite qaydası.',
+      ],
     },
   ],
 }

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './Button.module.css'
 
-function Button({ children, variant = 'primary', href, onClick, type = 'button' }) {
+function Button({ children, variant = 'primary', href, onClick, type = 'button', disabled }) {
   const className = `${styles.btn} ${styles[variant]}`
 
   if (href) {
@@ -21,7 +21,7 @@ function Button({ children, variant = 'primary', href, onClick, type = 'button' 
   }
 
   return (
-    <button type={type} onClick={onClick} className={className}>
+    <button type={type} onClick={onClick} className={className} disabled={disabled}>
       {children}
     </button>
   )

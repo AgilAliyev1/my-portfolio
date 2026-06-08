@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Layout from '../components/layout/Layout'
 import CertificateCard from '../components/ui/CertificateCard'
+import FadeIn from '../components/ui/FadeIn'
 import { certificates } from '../data/certificates'
 import { useLanguage } from '../i18n/LanguageContext'
 import styles from './Certificates.module.css'
@@ -31,37 +32,45 @@ function Certificates() {
   return (
     <Layout>
       <div className={styles.page}>
-        <h1 className={styles.heading}>{t.certificates.heading}</h1>
-        <p className={styles.sub}>{t.certificates.sub}</p>
+        <FadeIn>
+          <h1 className={styles.heading}>{t.certificates.heading}</h1>
+          <p className={styles.sub}>{t.certificates.sub}</p>
+        </FadeIn>
 
-        <div className={styles.controls}>
-          <input
-            className={styles.search}
-            type="text"
-            placeholder={t.certificates.searchPlaceholder}
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-          />
-          <div className={styles.filters}>
-            {categories.map(cat => (
-              <button
-                key={cat}
-                type="button"
-                onClick={() => setCategory(cat)}
-                className={cat === category ? `${styles.filter} ${styles.active}` : styles.filter}
-              >
-                {cat === 'all' ? t.common.all : t.categories[cat]}
-              </button>
-            ))}
+        <FadeIn delay={0.1}>
+          <div className={styles.controls}>
+            <input
+              className={styles.search}
+              type="text"
+              placeholder={t.certificates.searchPlaceholder}
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+            />
+            <div className={styles.filters}>
+              {categories.map(cat => (
+                <button
+                  key={cat}
+                  type="button"
+                  onClick={() => setCategory(cat)}
+                  className={cat === category ? `${styles.filter} ${styles.active}` : styles.filter}
+                >
+                  {cat === 'all' ? t.common.all : t.categories[cat]}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        </FadeIn>
 
         {filtered.length === 0 ? (
-          <p className={styles.empty}>{t.certificates.empty}</p>
+          <FadeIn delay={0.15}>
+            <p className={styles.empty}>{t.certificates.empty}</p>
+          </FadeIn>
         ) : (
           <div className={styles.grid}>
-            {filtered.map(cert => (
-              <CertificateCard key={cert.id} {...cert} />
+            {filtered.map((cert, index) => (
+              <FadeIn key={cert.id} delay={0.15 + index * 0.06}>
+                <CertificateCard {...cert} />
+              </FadeIn>
             ))}
           </div>
         )}

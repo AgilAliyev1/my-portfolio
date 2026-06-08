@@ -104,3 +104,13 @@ a.infoRow:hover {
   resize: vertical;
   min-height: 120px;
 }
+
+.success {
+  color: #22c55e;
+  font-size: 0.9rem;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 0.9rem;
+}
